@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 *   {
     box-sizing: border-box;
@@ -53,7 +53,6 @@ body {
 .menubar a {
     text-decoration: none;
     color: #444;
-    font-weight: 500;
     transition: color 0.3s ease-in-out;
 }
 
@@ -72,6 +71,7 @@ body {
     height: 650px;
     overflow: hidden;
     width: 100%;
+    max-width: 100%;
 }
 
 .showcase-container {
@@ -81,7 +81,6 @@ body {
     transform: translate(-50%, -50%);
     text-align: center;
     color: #fff;
-    font-weight: 700;
     text-transform: uppercase;
 }
 
@@ -96,7 +95,7 @@ body {
     display: inline-block;
 }
 
-.cen {
+.central {
     margin: 20px;
     display: block;
     font-size: 2rem;
@@ -120,13 +119,8 @@ body {
 
 #about {
     background: rgb(220, 220, 220);
-    font-weight: 900;
-}
-
-.about-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 50px 0px 30px 0px;
+    width: 100%;
+    max-width: 100%;
 }
 
 .about-title {
@@ -134,25 +128,76 @@ body {
     font-size: 2.4rem;
 }
 
+.about-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px 0px;
+}
+
 #about h3 {
-    font-size: 2.2rem;
+    font-size: 2rem;
 }
 
 .about-text {
     flex: 1 1 400px;
-    padding: 30px;
-    margin: auto;
+    margin: 20px;
     font-size: 1.2rem;
 }
 
 .about-img {
+    flex: 1 1 400px;
+    margin: 20px;
     max-width: 100%;
 }
 
-/* media queries */
-
-@media screen and (max-width: 605px) {
-    .logo, .menubar li {
-        font-size: 1rem
-    }
+.about-img img {
+    display: block;
+    max-width: 100%;
 }
+
+/* pizza menu */
+
+#menu {
+    width: 100%;
+    max-width: 100%;
+}
+.pizza-menu {
+    text-align: center;
+    font-size: 2.4rem;
+}
+
+.pizza-menu-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px 0;
+}
+
+.pizza-menu-container img {
+    width: 60%;
+    border-radius: 50%;
+}
+
+.pizza-menu-container img::after {
+    content: '';
+    padding-bottom: 100%;
+    display: block;
+}
+
+
+.pizza-menu-item {
+    display: flex;
+    flex: 1 1 600px;
+    justify-content: space-evenly;
+    margin-bottom: 3rem;
+}
+
+
+
+
+@media screen and (max-width: 640px) {
+    .about-img img {
+      width: 100%;
+    }
+
+}
+
